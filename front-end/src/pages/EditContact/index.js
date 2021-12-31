@@ -1,9 +1,11 @@
+import { PageHeader } from '../../components/PageHeader';
+
 // import { Container } from './styles';
 
 export function EditContact() {
   return (
     <div>
-      <h1>EditContact</h1>
+      <PageHeader title="Editar Douglas Oliveira" />
     </div>
   );
 }
