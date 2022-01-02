@@ -1,11 +1,13 @@
 import { PageHeader } from '../../components/PageHeader';
+import { ContactForm } from '../../components/ContactForm';
 
 // import { Container } from './styles';
 
 export function EditContact() {
   return (
-    <div>
+    <>
       <PageHeader title="Editar Douglas Oliveira" />
-    </div>
+      <ContactForm buttonLabel="Salvar alterações" />
+    </>
   );
 }
