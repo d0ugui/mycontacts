@@ -1,15 +1,23 @@
 const express = require('express');
 require('express-async-errors');
+
+const cors = require('./app/middlewares/cors');
+const errorHandler = require('./app/middlewares/errorHandler');
 const routes = require('./routes');
 
 const app = express();
 
+//* BodyParse
 app.use(express.json());
-app.use(routes);
-app.use((error, request, response, next) => {
-  console.log('##### Error handler');
-  console.log(error);
-  response.sendStatus(500);
-});
 
-app.listen(3000, () => console.log('🚀 Server started at http://localhost:3000'));
+//* CORS
+app.use(cors);
+
+//* Rotas da aplicação
+app.use(routes);
+
+//* Error handler
+app.use(errorHandler);
+
+//* Rota da aplicação
+app.listen(3001, () => console.log('🚀 Server started at http://localhost:3001'));
