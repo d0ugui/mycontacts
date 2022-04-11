@@ -34,8 +34,20 @@ export function Home() {
         const contactsList = await ContactsService.listContacts(orderBy);
 
         setContacts(contactsList);
+
+        throw new Error('Minha mensagem');
       } catch (error) {
-        console.log('error', error);
+        if (error instanceof TypeError) {
+          console.log('is type error');
+        }
+
+        if (error instanceof SyntaxError) {
+          console.log('is syntax error');
+        }
+
+        if (error instanceof Error) {
+          console.log('is generic error');
+        }
       } finally {
         setIsLoading(false);
       }
