@@ -2,11 +2,12 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Loader } from '../../components/Loader';
-import ContactsService from '../../services/ContactsService';
 
 import arrow from '../../assets/images/icons/arrow.svg';
 import edit from '../../assets/images/icons/edit.svg';
 import trash from '../../assets/images/icons/trash.svg';
+
+import ContactsService from '../../services/ContactsService';
 
 import {
   Container,
@@ -37,17 +38,10 @@ export function Home() {
 
         throw new Error('Minha mensagem');
       } catch (error) {
-        if (error instanceof TypeError) {
-          console.log('is type error');
-        }
-
-        if (error instanceof SyntaxError) {
-          console.log('is syntax error');
-        }
-
-        if (error instanceof Error) {
-          console.log('is generic error');
-        }
+        console.log('Name:', error.name);
+        console.log('Message:', error.message);
+        console.log('Response:', error.response);
+        console.log('Body:', error.body);
       } finally {
         setIsLoading(false);
       }
