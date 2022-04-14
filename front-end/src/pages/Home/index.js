@@ -1,5 +1,11 @@
-import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+
+import {
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+} from 'react';
 
 import { Loader } from '../../components/Loader';
 
@@ -31,7 +37,7 @@ export function Home() {
     contact.name.toLowerCase().includes(searchTerm.toLowerCase())
   )), [contacts, searchTerm]);
 
-  async function loadContacts() {
+  const loadContacts = useCallback(async () => {
     try {
       setIsLoading(true);
 
@@ -44,11 +50,11 @@ export function Home() {
     } finally {
       setIsLoading(false);
     }
-  }
+  }, [orderBy]);
 
   useEffect(() => {
     loadContacts();
-  }, [orderBy]);
+  }, [loadContacts]);
 
   function handleToggleOrderBy() {
     setOrderBy((prevState) => (
