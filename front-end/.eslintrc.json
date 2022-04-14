@@ -28,6 +28,8 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "class-methods-use-this": "off",
-    "react/jsx-no-bind": "off"
+    "react/jsx-no-bind": "off",
+    "no-nested-ternary": "off",
+    "react/jsx-one-expression-per-line": "off"
   }
 }
