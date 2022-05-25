@@ -28,7 +28,8 @@ import {
   EmptyListContainer,
   SearchNotFoundContainer,
 } from './styles';
-import { Button } from '../../components/Button';
+
+import Button from '../../components/Button';
 
 export function Home() {
   const [contacts, setContacts] = useState([]);
