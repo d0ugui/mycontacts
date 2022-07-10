@@ -1,5 +1,5 @@
 import { PageHeader } from '../../components/PageHeader';
-import { ContactForm } from '../../components/ContactForm';
+import ContactForm from '../../components/ContactForm';
 import ContactsService from '../../services/ContactsService';
 import toast from '../../utils/toast';
 
