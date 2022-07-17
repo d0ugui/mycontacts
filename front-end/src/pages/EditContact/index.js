@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 import { PageHeader } from '../../components/PageHeader';
 import ContactForm from '../../components/ContactForm';
-import { Loader } from '../../components/Loader';
+import Loader from '../../components/Loader';
 
 import toast from '../../utils/toast';
 import ContactsService from '../../services/ContactsService';

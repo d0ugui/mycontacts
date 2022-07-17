@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Overlay } from './styles';
 import Spinner from '../Spinner';
 
-export function Loader({ isLoading }) {
+export default function Loader({ isLoading }) {
   if (!isLoading) {
     return null;
   }

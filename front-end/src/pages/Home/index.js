@@ -7,8 +7,6 @@ import {
   useCallback,
 } from 'react';
 
-import { Loader } from '../../components/Loader';
-
 import arrow from '../../assets/images/icons/arrow.svg';
 import edit from '../../assets/images/icons/edit.svg';
 import trash from '../../assets/images/icons/trash.svg';
@@ -30,6 +28,8 @@ import {
 } from './styles';
 
 import Button from '../../components/Button';
+import Loader from '../../components/Loader';
+import Modal from '../../components/Modal';
 
 export function Home() {
   const [contacts, setContacts] = useState([]);
@@ -78,6 +78,18 @@ export function Home() {
   return (
     <Container>
       <Loader isLoading={isLoading} />
+
+      <Modal
+        danger
+        title="Tem certeza que deseja remover o contato 'Douglas Oliveira'?"
+        confirmLabel="Deletar"
+        cancelLabel="Cancelar"
+        onCancel={() => alert('Cancelou')}
+        onConfirm={() => alert('Confirmou')}
+      >
+        <h2>HJelloo</h2>
+        <h2>HJelloo</h2>
+      </Modal>
 
       {contacts.length > 0 && (
         <InputSearchContainer>
