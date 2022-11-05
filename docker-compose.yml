@@ -1,4 +1,4 @@
-version: "3.8"
+ocversion: "3.8"
 
 services:
   pg:
@@ -7,7 +7,9 @@ services:
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=mycontacts
+    volumes:
+      - ./back-end/src/database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
     restart: always
     ports:
-      - '5432:5432'
-
+      - "5432:5432"
