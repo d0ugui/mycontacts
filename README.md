@@ -1,12 +1,12 @@
-# 📖 About
+## 📖 About
 
 A full stack application developed with JavaScript in front and back, the app stores registered contacts similar to a contact list. We using React.js in front-end and Node.js in back-end with PostgreSQL in database.
 
-## 🧪 Technologies
+## 🧪 Stack
 
 [![My Skills](https://skillicons.dev/icons?i=js,react,nodejs,postgres,docker)](https://skillicons.dev)
 
-## 🚀 Run project
+## 🚀 Run
 
 To init project:
 
@@ -22,4 +22,6 @@ $ docker-compose up
 
 ## 📝 License
 
-Esse projeto está sob a licença MIT.
+This software is available under the following licenses:
+
+- [MIT](https://rem.mit-license.org)
