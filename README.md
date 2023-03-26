@@ -1,14 +1,20 @@
+<h1 align="center">
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/DWLsHRv/logo.png" alt="logo" border="0"></a>
+</h1>
+
+<p align="center">
+  <a href="https://ibb.co/3Wq4x0h"><img src="front-end/src/assets/images/tela.png" alt="Home" border="0"></a>
+</p>
+
 ## 📖 About
 
-A full stack application developed with JavaScript in front and back, the app stores registered contacts similar to a contact list. We using React.js in front-end and Node.js in back-end with PostgreSQL in database.
+This is a fullstack application developed using JavaScript in front-end and back-en. The app basically store contacts similar to a contact list. We're using React.js in front-end, Node.js in back-end and PostgreSQL in database with Docker.
 
-## 🧪 Stack
+## 🧪 Technologies
 
-[![My Skills](https://skillicons.dev/icons?i=js,react,nodejs,postgres,docker)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,react,styledcomponents,nodejs,express,postgres,docker)](https://skillicons.dev)
 
-## 🚀 Run
-
-To init project:
+## 🚀 Running the project
 
 ```bash
 # Clone repo
@@ -17,7 +23,22 @@ $ git clone https://github.com/d0ugui/mycontacts
 # Run and create containers
 $ docker-compose up
 
-# More infos about run back-end and front-end, open the respective folder and read the doc
+# install front-end deps
+$ cd front-end
+$ yarn or npm install
+
+# install back-end deps
+$ cd back-end
+$ yarn or npm install
+
+# running the container with database
+$ docker start pg
+
+# running back-end
+$ yarn dev
+
+# running front-end
+$ yarn start
 ```
 
 ## 📝 License
