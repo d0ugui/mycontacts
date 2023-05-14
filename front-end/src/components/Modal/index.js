@@ -49,7 +49,8 @@ export default function Modal({
             </Button>
           </Footer>
         </Container>
-      </Overlay>,
+      </Overlay>
+      ,
     </ReactPortal>
   );
 }
