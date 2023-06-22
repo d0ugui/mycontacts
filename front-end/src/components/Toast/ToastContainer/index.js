@@ -1,12 +1,18 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useEffect } from 'react';
 import ToastMessage from '../ToastMessage';
 import { Container } from './styles';
 
 import { toastEventManager } from '../../../utils/toast';
+import useAnimatedList from '../../../hooks/useAnimatedList';
 
 export default function ToastContainer() {
-  const [messages, setMessages] = useState([]);
-  const [pendingRemovalMessagesIds, setPendingRemovalMessagesIds] = useState([]);
+  const {
+    items: messages,
+    setItems: setMessages,
+    pendingRemovalItemsIds,
+    handleRemoveItem,
+    handleAnimationEnd,
+  } = useAnimatedList();
 
   useEffect(() => {
     function handleAddToast({ type, text, duration }) {
@@ -23,20 +29,7 @@ export default function ToastContainer() {
     return () => {
       toastEventManager.removeListener('addtoast', handleAddToast);
     };
-  }, []);
-
-  const handleRemoveMessage = useCallback((id) => {
-    setPendingRemovalMessagesIds(
-      (prevState) => [...prevState, id],
-    );
-  }, []);
-
-  const handleAnimationEnd = useCallback((id) => {
-    setMessages((prevState) => prevState.filter((message) => message.id !== id));
-    setPendingRemovalMessagesIds(
-      (prevState) => prevState.filter((messageId) => messageId !== id),
-    );
-  }, []);
+  }, [setMessages]);
 
   return (
     <Container>
@@ -44,8 +37,8 @@ export default function ToastContainer() {
         <ToastMessage
           key={message.id}
           message={message}
-          onRemoveMessage={handleRemoveMessage}
-          isLeaving={pendingRemovalMessagesIds.includes(message.id)}
+          onRemoveMessage={handleRemoveItem}
+          isLeaving={pendingRemovalItemsIds.includes(message.id)}
           onAnimationEnd={handleAnimationEnd}
         />
       ))}
