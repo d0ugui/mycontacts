@@ -24,11 +24,11 @@ $ git clone https://github.com/d0ugui/mycontacts
 $ docker-compose up
 
 # install front-end deps
-$ cd front-end
+$ cd fe
 $ yarn or npm install
 
 # install back-end deps
-$ cd back-end
+$ cd api
 $ yarn or npm install
 
 # running the container with database
