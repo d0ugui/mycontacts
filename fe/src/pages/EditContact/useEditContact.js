@@ -33,7 +33,7 @@ export function useEditContact() {
         }
 
         safeAsyncAction(() => {
-          navigate('/');
+          navigate('/', { replace: true });
           toast({
             type: 'danger',
             text: 'Contato não encontrado!',
