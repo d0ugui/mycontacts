@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://ibb.co/3Wq4x0h"><img src="front-end/src/assets/images/tela.png" alt="Home" border="0"></a>
+  <a href="https://ibb.co/3Wq4x0h"><img src="fe/src/assets/images/tela.png" alt="Home" border="0"></a>
 </p>
 
 ## 📖 About
