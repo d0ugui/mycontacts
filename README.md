@@ -2,10 +2,6 @@
     <a href="https://imgbb.com/"><img src="https://i.ibb.co/82pNyj8/Home.png" alt="logo" border="0"></a>
 </h1>
 
-<p align="center">
-  <a href="https://ibb.co/3Wq4x0h"><img src="fe/src/assets/images/tela.png" alt="Home" border="0"></a>
-</p>
-
 ## 📖 About
 
 This is a fullstack application developed using JavaScript in front-end and back-en. The app basically store contacts similar to a contact list. We're using React.js in front-end, Node.js in back-end and PostgreSQL in database with Docker.
